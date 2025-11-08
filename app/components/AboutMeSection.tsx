@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const AboutUs = () => {
   return (
     <section className="w-full bg-black text-white py-24 overflow-hidden">
-      <div className="px-5 xl:px-30 mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-400 mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center px-10">
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -14,7 +14,7 @@ const AboutUs = () => {
           className="relative w-full flex justify-center"
         >
           {/* Glow behind image */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#CCB078]/30 to-transparent blur-2xl -z-10" />
+          <div className="absolute inset-0 bg-linear-to-b from-[#CCB078]/30 to-transparent blur-2xl -z-10" />
 
           {/* Image takes natural height */}
           <img
