@@ -50,7 +50,7 @@ const CaseBlock: React.FC<CaseBlockProps> = ({
   const color = indexColors[(index - 1) % indexColors.length];
 
   return (
-    <div className="w-full flex items-center py-20">
+    <div className="w-full flex items-center xl:py-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-20 items-start">
         {/* LEFT SIDE */}
         <motion.div
@@ -59,7 +59,7 @@ const CaseBlock: React.FC<CaseBlockProps> = ({
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className="flex items-start gap-10">
+          <div className="xl:flex items-start gap-10">
             {/* INDEX BADGE */}
             <motion.div
               initial={{ scale: 0, rotate: -20 }}
@@ -67,7 +67,7 @@ const CaseBlock: React.FC<CaseBlockProps> = ({
               transition={{ duration: 0.5, ease: "backOut" }}
               viewport={{ once: true }}
               className={`
-    p-5 text-white text-xl font-bold rounded-3xl shadow-lg
+    p-5 text-white text-xl mb-5 font-bold rounded-3xl shadow-lg
     flex items-center justify-center aspect-square h-16 w-16
     ${color.bg} ring-4 ${color.ring}
   `}
@@ -92,7 +92,7 @@ const CaseBlock: React.FC<CaseBlockProps> = ({
               </motion.div>
 
               {/* BUTTON */}
-              <div className="flex items-center justify-center mt-20">
+              <div className="hidden xl:flex items-center justify-center mt-20">
                 <button
                   onClick={onButtonClick}
                   className={`rounded-xl py-2 px-4 ${color.bg} hover:${color.ring} cursor-pointer
@@ -172,6 +172,16 @@ const CaseBlock: React.FC<CaseBlockProps> = ({
                     {ind.name}
                   </motion.div>
                 ))}
+              </div>
+              <div className="xl:hidden flex items-center justify-start my-10">
+                <button
+                  onClick={onButtonClick}
+                  className={`rounded-xl py-2 px-4 ${color.bg} hover:${color.ring} cursor-pointer
+                             text-white font-semibold shadow-lg hover:shadow-xl 
+                             transition-shadow duration-300`}
+                >
+                  {buttonText}
+                </button>
               </div>
             </div>
           </div>

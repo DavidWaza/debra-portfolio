@@ -1,7 +1,6 @@
 "use client";
 import CaseBlock from "./CaseBlock";
 import { useRouter } from "next/navigation";
-import { Receipt, Wallet } from "@phosphor-icons/react";
 import { caseStudies } from "../utils/data";
 
 const CaseStudy = () => {
@@ -11,7 +10,7 @@ const CaseStudy = () => {
       <div className="py-20">
         <p className="text-4xl xl:text-6xl uppercase font-bold">Case study</p>
       </div>
-    <div className="space-y-32">
+    <div className="space-y-10">
       {caseStudies.map((item, idx) => (
         <CaseBlock
           key={idx}
