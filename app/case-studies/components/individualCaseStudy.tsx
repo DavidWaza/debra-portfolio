@@ -30,6 +30,8 @@ interface CaseStudyProps {
   creatingPersonas?: string[];
   lightActionFigma?: string[];
   image?: string;
+  goals?: string[];
+  goalsImages?: string[];
 }
 
 const fadeIn = {
@@ -90,6 +92,8 @@ const IndividualCaseStudy: React.FC<CaseStudyProps> = ({
   tools,
   context,
   universityBackground,
+  goals,
+  goalsImages,
   challenges,
   solution,
   solutionImages,
@@ -148,6 +152,30 @@ const IndividualCaseStudy: React.FC<CaseStudyProps> = ({
         </Section>
       )}
 
+     {/* ✅ SOLUTION */}
+      {solution && solution.length > 0 && (
+        <Section title="Solution">
+          <ul className="space-y-2 list-disc list-inside">
+            {solution.map((s, i) => (
+              <motion.li
+                key={i}
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                custom={i}
+                viewport={{ once: true }}
+              >
+                {s}
+              </motion.li>
+            ))}
+          </ul>
+
+          {solutionImages && solutionImages.length > 0 && (
+            <ImageGrid images={solutionImages} />
+          )}
+        </Section>
+      )}
+
       {/* ✅ CHALLENGES */}
       {challenges && challenges.length > 0 && (
         <Section title="Challenges">
@@ -169,10 +197,10 @@ const IndividualCaseStudy: React.FC<CaseStudyProps> = ({
       )}
 
       {/* ✅ SOLUTION */}
-      {solution && solution.length > 0 && (
-        <Section title="Solution">
+      {goals && goals.length > 0 && (
+        <Section title="Goals">
           <ul className="space-y-2 list-disc list-inside">
-            {solution.map((s, i) => (
+            {goals.map((s, i) => (
               <motion.li
                 key={i}
                 variants={fadeIn}
@@ -186,8 +214,8 @@ const IndividualCaseStudy: React.FC<CaseStudyProps> = ({
             ))}
           </ul>
 
-          {solutionImages && solutionImages.length > 0 && (
-            <ImageGrid images={solutionImages} />
+          {goalsImages && goalsImages.length > 0 && (
+            <ImageGrid images={goalsImages} />
           )}
         </Section>
       )}
