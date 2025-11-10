@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import React from "react";
-import { sub } from "motion/react-client";
 
 interface CaseBlockProps {
   index?: number;
