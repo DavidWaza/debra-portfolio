@@ -38,10 +38,10 @@ const CaseBlock: React.FC<CaseBlockProps> = ({
   onButtonClick,
 }) => {
   const indexColors = [
+    { bg: "bg-blue-700", ring: "ring-blue-700/40" },
     { bg: "bg-blue-900", ring: "ring-blue-700/40" },
-    { bg: "bg-red-900", ring: "ring-red-700/40" },
-    { bg: "bg-emerald-900", ring: "ring-emerald-700/40" },
     { bg: "bg-purple-900", ring: "ring-purple-700/40" },
+    { bg: "bg-emerald-900", ring: "ring-emerald-700/40" },
     { bg: "bg-yellow-800", ring: "ring-yellow-600/40" },
     { bg: "bg-orange-900", ring: "ring-orange-700/40" },
   ];

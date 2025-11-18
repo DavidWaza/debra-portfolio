@@ -5,6 +5,82 @@ import { s } from "motion/react-client";
 export const caseStudies = [
   {
     index: 1,
+    title: "Asterlio CRM.",
+    date: "August 2025",
+    role: "UX research and flow design, Information architecture & wireframing, UI design and dashboard visualization, Usability testing and iteration.",
+    subRole: "Product Designer | UI/UX Designer",
+    location: "Abuja, Nigeria",
+    description:
+      "Asterlio is a client facing customer relationship management system designed to help organizations handle real time customer interactions efficiently. Asterlio was built for scalability, transparency...",
+    projectType: "Content Management System",
+    image: "/assets/kippacase.avif",
+    logoHero: "/assets/kippa.webp",
+    buttonText: "Read Full Case Study",
+    buttonLink: "/case-studies/asterlio",
+
+    industries: [
+      {
+        name: "SAAS",
+        icon: Wallet,
+        color: "bg-blue-600 text-blue-100",
+      },
+    ],
+
+    // Optional fields
+    deliverables: "Low & High Fidelity Interfaces",
+    tools: "Figma, Google Docs",
+    context: `Asterlio is a client facing customer relationship management system designed to help organizations handle real time customer interactions efficiently. Asterlio was built for scalability, transparency, and speed, the MVP was developed as an in-house alternative to third-party solutions like Tidio, cutting costs while paving the way for a future SaaS product under Omniswift`,
+    goals: [
+      "Manage real-time chats and tickets efficiently.",
+      "Improve average response and resolution times.",
+      "Gain visibility into agent performance and customer satisfaction.",
+      "Maintain a clean, intuitive, and scalable interface that supports future SaaS expansion.",
+    ],
+    objectives: [
+      "Transparency: Provide clear visibility into ticket status, response times, and agent activity.",
+      "Speed: Ensure quick access to key insights within 2–3 clicks.",
+      "Scalability: Design flexible layouts and components to accommodate future SaaS adoption.",
+      "User Experience Consistency: Create a unified experience for Admins and Agents through structured navigation and clean data visualization.",
+    ],
+    challenges: [
+      "Limited customization and branding control.",
+      "High subscription costs as customer base grew.",
+      "No integrated dashboard summarizing activity across channels.",
+    ],
+    solution: [
+      `Color Palette: Blue for trust and consistency, balanced with white backgrounds for readability.`,
+      "Typography: Clean sans-serif typeface for clear hierarchy.",
+      "Data Visualization: Line graphs and pie charts simplify trend tracking.",
+      "Status Indicators: Color-coded tags for ticket categories (Technical, Billing, General, Feature Requests).",
+    ],
+
+    solutionImages: ["/assets/kippa/case-2.webp"],
+    designProcess: {
+      informationArchitecture:
+        "Mapped all key workflows and created clear navigation.",
+      wireframing:
+        "Low-fidelity wireframes followed by clickable high-fidelity prototypes.",
+      visualDesign: "Updated color palette, typography, and iconography.",
+      responsiveDesign: "Ensured compatibility across web and mobile.",
+      accessibility: "Applied WCAG standards for text contrast and usability.",
+    },
+    CreatingPersonas: [
+      "/assets/kippa/case-3.webp",
+      "/assets/kippa/case-4.webp",
+    ],
+    LightActionFigma: [
+      "/assets/kippa/case-5.webp",
+      "/assets/kippa/case-6.webp",
+      "/assets/kippa/case-7.webp",
+      "/assets/kippa/case-8.webp",
+      "/assets/kippa/case-9.webp",
+      "/assets/kippa/case-10.webp",
+      "/assets/kippa/case-11.webp",
+      "/assets/kippa/case-4.webp",
+    ],
+  },
+  {
+    index: 2,
     title: "Kippa.",
     date: "February 2023",
     role: "Product Designer",
@@ -74,7 +150,7 @@ export const caseStudies = [
   },
 
   {
-    index: 2,
+    index: 3,
     title: "Residentley.",
     date: "January 2024",
     role: "Product Designer",
@@ -85,7 +161,7 @@ export const caseStudies = [
     projectType: "Mobile & Web Application",
     image: "/assets/residency.avif",
     logoHero: "/assets/residency.avif",
-    
+
     buttonText: "Read Full Case Study",
     buttonLink: "/case-studies/residentley",
 
@@ -109,23 +185,19 @@ export const caseStudies = [
       "Visitor access through host profile",
       "Design an intuitive and accessible mobile app for all user types.",
     ],
-    goalsImages: [
-      "/assets/residently/case-4.webp",
-    ],
+    goalsImages: ["/assets/residently/case-4.webp"],
     challenges: [
       "Fragmented Processes: Property management tasks were handled through multiple platforms, causing confusion and inefficiency..",
       "Poor Communication: Inability of estate occupants to channel and follow up the their complain through the right  leads to delay in resolving tenant issues.",
       "Difficulty in granting visitors access: Grant easy access to guest coming into the estate.",
     ],
-    challengesImages: [
-      "/assets/residency/case-6.webp",
-    ],
+    challengesImages: ["/assets/residency/case-6.webp"],
 
     solution: [
       "Centralized communication platform.",
       "Intuitive interface for reporting issues and paying dues.",
     ],
-   solutionImages: [
+    solutionImages: [
       "/assets/residently/case-2.webp",
       "/assets/residently/case-3.webp",
     ],
@@ -143,7 +215,7 @@ export const caseStudies = [
   },
 
   {
-    index: 3,
+    index: 4,
     title: "Veritas University.",
     date: "October 2024",
     role: "Product Designer",

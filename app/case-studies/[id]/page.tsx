@@ -26,11 +26,12 @@ const CaseStudyPage = () => {
       deliverables={caseStudy.deliverables}
       tools={caseStudy.tools}
       context={caseStudy.context}
+      objective={caseStudy.objectives}
       universityBackground={caseStudy.universityBackground}
       goals={caseStudy.goals}
       goalsImages={caseStudy.goalsImages || []}
       challenges={caseStudy.challenges}
-    //   challengesImages={caseStudy.challengesImages || []}
+      //   challengesImages={caseStudy.challengesImages || []}
       solution={caseStudy.solution}
       solutionImages={caseStudy.solutionImages || []}
       creatingPersonas={caseStudy.CreatingPersonas}

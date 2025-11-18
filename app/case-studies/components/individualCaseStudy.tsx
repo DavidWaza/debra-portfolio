@@ -32,6 +32,7 @@ interface CaseStudyProps {
   image?: string;
   goals?: string[];
   goalsImages?: string[];
+  objective?:string[]
 }
 
 const fadeIn = {
@@ -100,11 +101,11 @@ const IndividualCaseStudy: React.FC<CaseStudyProps> = ({
   designProcess,
   creatingPersonas,
   lightActionFigma,
+  objective,
   image,
 }) => {
   return (
     <div className="max-w-5xl mx-auto p-6 space-y-12 text-white">
-
       {/* ✅ BEAUTIFUL HERO IMAGE */}
       {image && (
         <motion.div
@@ -129,12 +130,26 @@ const IndividualCaseStudy: React.FC<CaseStudyProps> = ({
         )}
 
         <div className="space-y-2 text-lg text-gray-300">
-          {role && <p><b className="text-white">Role:</b> {role}</p>}
-          {duration && <p><b className="text-white">Duration:</b> {duration}</p>}
-          {deliverables && (
-            <p><b className="text-white">Deliverables:</b> {deliverables}</p>
+          {role && (
+            <p>
+              <b className="text-white">Role(s):</b> {role}
+            </p>
           )}
-          {tools && <p><b className="text-white">Tools:</b> {tools}</p>}
+          {duration && (
+            <p>
+              <b className="text-white">Duration:</b> {duration}
+            </p>
+          )}
+          {deliverables && (
+            <p>
+              <b className="text-white">Deliverables:</b> {deliverables}
+            </p>
+          )}
+          {tools && (
+            <p>
+              <b className="text-white">Tools:</b> {tools}
+            </p>
+          )}
         </div>
       </div>
 
@@ -142,6 +157,49 @@ const IndividualCaseStudy: React.FC<CaseStudyProps> = ({
       {context && (
         <Section title="Project Context">
           <p>{context}</p>
+        </Section>
+      )}
+      {/* GOALS */}
+      {goals && goals.length > 0 && (
+        <Section title="Goals">
+          <ul className="space-y-2 list-disc list-inside">
+            {goals.map((s, i) => (
+              <motion.li
+                key={i}
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                custom={i}
+                viewport={{ once: true }}
+              >
+                {s}
+              </motion.li>
+            ))}
+          </ul>
+
+          {goalsImages && goalsImages.length > 0 && (
+            <ImageGrid images={goalsImages} />
+          )}
+        </Section>
+      )}
+
+      {/* OBJECTIVES */}
+       {objective && objective.length > 0 && (
+        <Section title="Objective">
+          <ul className="space-y-2 list-disc list-inside">
+            {objective.map((s, i) => (
+              <motion.li
+                key={i}
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                custom={i}
+                viewport={{ once: true }}
+              >
+                {s}
+              </motion.li>
+            ))}
+          </ul>
         </Section>
       )}
 
@@ -152,7 +210,26 @@ const IndividualCaseStudy: React.FC<CaseStudyProps> = ({
         </Section>
       )}
 
-     {/* ✅ SOLUTION */}
+      {/* ✅ CHALLENGES */}
+      {challenges && challenges.length > 0 && (
+        <Section title="Challenges">
+          <ul className="space-y-2 list-disc list-inside">
+            {challenges.map((c, i) => (
+              <motion.li
+                key={i}
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                custom={i}
+                viewport={{ once: true }}
+              >
+                {c}
+              </motion.li>
+            ))}
+          </ul>
+        </Section>
+      )}
+      {/* ✅ SOLUTION */}
       {solution && solution.length > 0 && (
         <Section title="Solution">
           <ul className="space-y-2 list-disc list-inside">
@@ -176,49 +253,7 @@ const IndividualCaseStudy: React.FC<CaseStudyProps> = ({
         </Section>
       )}
 
-      {/* ✅ CHALLENGES */}
-      {challenges && challenges.length > 0 && (
-        <Section title="Challenges">
-          <ul className="space-y-2 list-disc list-inside">
-            {challenges.map((c, i) => (
-              <motion.li
-                key={i}
-                variants={fadeIn}
-                initial="hidden"
-                whileInView="visible"
-                custom={i}
-                viewport={{ once: true }}
-              >
-                {c}
-              </motion.li>
-            ))}
-          </ul>
-        </Section>
-      )}
 
-      {/* ✅ SOLUTION */}
-      {goals && goals.length > 0 && (
-        <Section title="Goals">
-          <ul className="space-y-2 list-disc list-inside">
-            {goals.map((s, i) => (
-              <motion.li
-                key={i}
-                variants={fadeIn}
-                initial="hidden"
-                whileInView="visible"
-                custom={i}
-                viewport={{ once: true }}
-              >
-                {s}
-              </motion.li>
-            ))}
-          </ul>
-
-          {goalsImages && goalsImages.length > 0 && (
-            <ImageGrid images={goalsImages} />
-          )}
-        </Section>
-      )}
 
       {/* ✅ DESIGN PROCESS */}
       {designProcess && (
