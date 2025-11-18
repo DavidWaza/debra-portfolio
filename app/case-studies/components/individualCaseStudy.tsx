@@ -32,7 +32,7 @@ interface CaseStudyProps {
   image?: string;
   goals?: string[];
   goalsImages?: string[];
-  objective?:string[]
+  objective?: string[];
 }
 
 const fadeIn = {
@@ -159,6 +159,7 @@ const IndividualCaseStudy: React.FC<CaseStudyProps> = ({
           <p>{context}</p>
         </Section>
       )}
+
       {/* GOALS */}
       {goals && goals.length > 0 && (
         <Section title="Goals">
@@ -184,7 +185,7 @@ const IndividualCaseStudy: React.FC<CaseStudyProps> = ({
       )}
 
       {/* OBJECTIVES */}
-       {objective && objective.length > 0 && (
+      {objective && objective.length > 0 && (
         <Section title="Objective">
           <ul className="space-y-2 list-disc list-inside">
             {objective.map((s, i) => (
@@ -252,8 +253,6 @@ const IndividualCaseStudy: React.FC<CaseStudyProps> = ({
           )}
         </Section>
       )}
-
-
 
       {/* ✅ DESIGN PROCESS */}
       {designProcess && (
